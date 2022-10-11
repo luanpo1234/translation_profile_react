@@ -1,13 +1,331 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+	--padding-default: 10px 25px 10px 25px;
+	--dark-green: #124019;
+	--almost-white: #BBBBBB;
+  }  
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+	/*color: #334433;*/
+	color: black;
+}
+
+form {
+	display: grid;
+	grid-gap: 5px;
+	/* grid-template-columns : repeat(2, 1fr);*/
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	/* border: 2px solid red; */
+}
+
+button {
+	border: none;
+	height: 40px;
+	width: 15px;
+	background-color: #2a7a38;
+	color: white;
+	border-radius: 10px;
+}
+
+h1, h2 {
+	margin-bottom: 2.5vh;
+}
+
+h1 {
+	font-size: 52px;
+}
+
+ul li {
+	list-style-type: none;
+	/* list-style-position: outside;*/
+	margin: 0 0 1em 1em;
+}
+
+p {
+	/*Avoiding overflow on long link:
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	
+	/**/
+	word-break: break-word;
+	
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;	  
+}
+
+input {
+	padding: 12px 20px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	resize: none;
+  }
+  
+.home-icon{
+	border: none;
+	height: 7.5vh;
+	width: auto;
+}
+
+.main-container {
+	margin: 20px auto;
+	width: 80%;
+	/* min-width: 1000px;
+	max-width: 1000px; */
+	box-shadow: 0px 5px 5px grey;
+}
+
+main hr {
+	margin:30px auto;
+	width: 57vw;
+	height: 1px;
+	color: silver;
+}
+
+.toggle-hr {
+	display: none;
+}
+
+#profile {
+	height: 250px;
+	width: auto;
+	border: 1px solid silver;
+}
+
+.header{
+	/* background: rgb(2,0,36); */
+	padding-top: 20px;
+	display: flex;
+	background: #359f45;
+	margin: auto;
+	min-height: 200px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+    justify-content: center;
+}
+
+#title-section{
+	flex:9;
+	width: 90%;
+	/* padding: 10vh; */
+	margin: auto;
+
+}
+
+#top-section {	
+	margin: 5vh auto 2vw auto;
+	/* width: 80%; */
+	display: flex;
+	/*border: 2px solid green;*/
+}
+
+.content-left {
+	/* display: flex; */
+	padding: var(--padding-default);
+	/* border: 2px solid red; */
+	flex: 2;
+}
+
+#img-skills{
+	display: flex;
+	/* border: 2px solid green; */
+}
+
+#list-skills {
+	/* line-height: 27px;
+	font-size: 18px; */
+	padding: var(--padding-default);
+	flex:2;
+	/* border: 2px solid fuchsia; */
+}
+
+.content-right {
+	padding: var(--padding-default);
+	/* text-align: center; */
+/* 	display: grid; */
+
+	/* border: 2px solid blue; */
+	flex: 1;
+}
+
+.links-top {
+	flex: 1;
+}
+
+#secondary-content {
+	text-align: center;
+	line-height: 20px;
+}
+
+#secondary-content ul {
+	margin: 40px auto 10px auto;
+}
+
+#secondary-content li {
+	list-style-type: disc;
+}
+
+#secondary-content p {
+	margin: 12px auto;
+	text-align: justify;
+	line-height: 22px;
+	width: 90%;
+}
+
+#secondary-content {
+padding: var(--padding-default);
+margin: auto;
+width: 90%;
+}
+
+button,  input, select, textarea {
+	min-height: 35px;
+	font-family: inherit;
+	font-size: 100%;
+	width : 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  }
+  
+/*footer source: https://codepen.io/scanfcode/pen/MEZPNd*/
+.site-footer
+{
+  margin: 20px auto 20px 0;
+  background-color: var(--dark-green);
+  padding: var(--padding-default);
+  padding-top: 20px;
+  padding-bottom: 25px;
+  /* padding: 45px 0 20px; */
+  color: var(--almost-white);
+}
+
+.site-footer a
+{
+  color: white;
+}
+
+.site-footer hr
+{
+  margin: 8px auto 8px auto;
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+
+.section-title {
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 10vh;
+}
+
+.contact {
+	margin-bottom: 7vh;
+}
+
+.pflichtinhalt {
+	padding: var(--padding-default);
+	padding-top: 30px;
+}
+
+.pflichtinhalt p, span, h1, h2{
+	margin-bottom: 20px;
+}
+
+.datenschutz {
+	text-align: justify;
+}
+
+.lang-link {
+	cursor:pointer;
+	color:black;
+	text-decoration:underline;
+}
+
+@media only screen and (min-width: 1000px) {
+	.main-container {
+		min-width: 1000px;
+		max-width: 1000px;
+	}
+	
+}
+
+@media only screen and (max-width: 900px) {
+	.flex {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.main-container {
+		width: 100vw;
+		margin: auto;
+	}
+
+	.site-footer {
+		margin: 20px auto 0 auto;
+	}
+
+	.toggle-hr{
+		display: block;
+	}
+}
+
+/*Gambiarra do min e max width: 600 pra conseguir o comportamento que eu quero
+de centralizado + sem padding */
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 12vw;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+	.site-footer {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.header {
+		padding: var(--padding-default);
+		padding-top: 20px;
+	}
+	.site-footer p
+	{
+	padding-left: 70px;
+	}
+
+	.site-footer ul {
+		padding-left: 50px;
+	}
 }
